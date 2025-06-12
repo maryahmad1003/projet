@@ -2,8 +2,8 @@
   "users": [
     {
       "id": "1",
-      "firstName": "Alice",
-      "lastName": "Martin",
+      "firstName": "Amadou dioulde",
+      "lastName": "diallo",
       "phone": "+33612345678",
       "password": "123456",
       "avatar": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150",
@@ -15,8 +15,8 @@
     },
     {
       "id": "2",
-      "firstName": "Bob",
-      "lastName": "Durand",
+      "firstName": "mary",
+      "lastName": "diallo",
       "phone": "+33687654321",
       "password": "123456",
       "avatar": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150",
