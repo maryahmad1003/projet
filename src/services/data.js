@@ -5,8 +5,8 @@ export class DataService {
       const demoUsers = [
         {
           id: '1',
-          firstName: 'Alice',
-          lastName: 'Martin',
+          firstName: 'Amadou dioulde',
+          lastName: 'diallo',
           phone: '+33612345678',
           password: '123456',
           avatar: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150',
@@ -18,8 +18,8 @@ export class DataService {
         },
         {
           id: '2',
-          firstName: 'Bob',
-          lastName: 'Durand',
+          firstName: 'mary',
+          lastName: 'Diallo',
           phone: '+33687654321',
           password: '123456',
           avatar: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150',
@@ -31,8 +31,8 @@ export class DataService {
         },
         {
           id: '3',
-          firstName: 'Claire',
-          lastName: 'Petit',
+          firstName: 'papa',
+          lastName: 'mary',
           phone: '+33698765432',
           password: '123456',
           avatar: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150',
@@ -44,8 +44,8 @@ export class DataService {
         },
         {
           id: '4',
-          firstName: 'David',
-          lastName: 'Moreau',
+          firstName: 'ala mine',
+          lastName: 'sy',
           phone: '+33645123789',
           password: '123456',
           avatar: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150',
