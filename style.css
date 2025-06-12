@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.message-bubble {
+  position: relative;
+  max-width: 75%;
+  word-wrap: break-word;
+}
+
+.message-sent {
+  @apply text-white rounded-lg rounded-br-sm bg-whatsapp-green;
+}
+
+.message-received {
+  @apply text-gray-800 bg-white rounded-lg rounded-bl-sm dark:bg-gray-700 dark:text-gray-200;
+}
+
+.typing-indicator {
+  @apply flex p-2 space-x-1;
+}
+
+.typing-dot {
+  @apply w-2 h-2 bg-gray-400 rounded-full animate-bounce;
+  animation-delay: 0s;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.story-ring {
+  background: linear-gradient(45deg, #f093fb 0%, #f5576c 25%, #4facfe 75%, #00f2fe 100%);
+  padding: 2px;
+  border-radius: 50%;
+}
+
+.story-inner {
+  background: white;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.call-animation {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.notification-badge {
+  @apply absolute flex items-center justify-center w-5 h-5 text-xs text-white rounded-full -top-1 -right-1 bg-whatsapp-green;
+}
+
+.online-indicator {
+  @apply absolute bottom-0 right-0 w-3 h-3 border-2 border-white rounded-full bg-whatsapp-green;
+}
+
+/* Story viewer styles */
+.story-viewer {
+  background: linear-gradient(45deg, rgba(0,0,0,0.8), rgba(0,0,0,0.9));
+}
+
+/* Message context menu */
+.message-context-menu {
+  @apply absolute z-50 py-2 bg-white rounded-lg shadow-lg dark:bg-gray-800 min-w-48;
+}
+
+.message-context-menu button {
+  @apply w-full px-4 py-2 text-sm text-left hover:bg-gray-100 dark:hover:bg-gray-700;
+}
+
+/* Emoji picker */
+.emoji-picker {
+  @apply grid grid-cols-8 gap-1 overflow-y-auto max-h-48;
+}
+
+.emoji-btn {
+  @apply p-2 text-lg rounded cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700;
+}
+
+/* Voice message waveform */
+.voice-waveform {
+  @apply flex items-center space-x-1;
+}
+
+.voice-bar {
+  @apply w-1 rounded-full bg-whatsapp-green;
+  height: 4px;
+  animation: voice-wave 1.5s ease-in-out infinite;
+}
+
+.voice-bar:nth-child(2) { animation-delay: 0.1s; }
+.voice-bar:nth-child(3) { animation-delay: 0.2s; }
+.voice-bar:nth-child(4) { animation-delay: 0.3s; }
+.voice-bar:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes voice-wave {
+  0%, 100% { height: 4px; }
+  50% { height: 16px; }
+}
+
+/* File upload progress */
+.upload-progress {
+  @apply absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg;
+}
+
+.progress-circle {
+  @apply w-12 h-12 border-4 border-white rounded-full border-t-transparent animate-spin;
+}
+
+/* Group member selection */
+.member-tag {
+  @apply inline-flex items-center px-2 py-1 text-xs text-white rounded-full bg-whatsapp-green;
+}
+
+.member-tag button {
+  @apply ml-1 text-white hover:text-gray-200;
+}
+
+/* Search highlight */
+.search-highlight {
+  @apply bg-yellow-200 dark:bg-yellow-600;
+}
+
+/* Archived chat indicator */
+.archived-indicator {
+  @apply absolute top-0 right-0 flex items-center justify-center w-4 h-4 text-xs text-white bg-gray-500 rounded-full;
+}
+
+/* Broadcast list indicator */
+.broadcast-indicator {
+  @apply absolute flex items-center justify-center w-4 h-4 bg-blue-500 rounded-full -bottom-1 -right-1;
+}
+
+/* Status indicators */
+.status-online {
+  @apply text-green-500;
+}
+
+.status-away {
+  @apply text-yellow-500;
+}
+
+.status-busy {
+  @apply text-red-500;
+}
+
+.status-offline {
+  @apply text-gray-500;
+}
+
+/* Message status icons */
+.message-status {
+  @apply inline-flex items-center space-x-1;
+}
+
+.status-sending {
+  @apply text-gray-400;
+}
+
+.status-sent {
+  @apply text-gray-400;
+}
+
+.status-delivered {
+  @apply text-gray-400;
+}
+
+.status-read {
+  @apply text-whatsapp-green;
+}
+
+/* Dark mode improvements */
+.dark .message-received {
+  @apply text-gray-200 bg-gray-700;
+}
+
+.dark .story-inner {
+  background: #374151;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .message-bubble {
+    max-width: 85%;
+  }
+  
+  .sidebar {
+    @apply w-full;
+  }
+  
+  .chat-window {
+    @apply w-full;
+  }
+}
+
+/* Animation improvements */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-in-out;
+}
+
+.scale-in {
+  animation: scaleIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Custom scrollbar for webkit browsers */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full dark:bg-gray-600;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
